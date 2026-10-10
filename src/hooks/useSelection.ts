@@ -1,6 +1,11 @@
 // Võ Minh Tài - 23521382
 import { useState } from "react";
 
+export type SelectionListProps = {
+  selected: ReadonlySet<string>;
+  onToggle: (label: string) => void;
+};
+
 export function useSelection() {
   const [selected, setSelected] = useState<ReadonlySet<string>>(
     () => new Set(),

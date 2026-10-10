@@ -6,19 +6,15 @@ import ListSection from "@/components/ListSection";
 import SectionHeader from "@/components/SectionHeader";
 import SelectableRow from "@/components/SelectableRow";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
+import { type SelectionListProps } from "@/hooks/useSelection";
 import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/fruits-vegetables.jpg");
 
-type FruitsVegetablesListProps = {
-  selected: ReadonlySet<string>;
-  onToggle: (label: string) => void;
-};
-
 export default function FruitsVegetablesList({
   selected,
   onToggle,
-}: FruitsVegetablesListProps) {
+}: SelectionListProps) {
   return (
     <ListSection
       title="SectionList - Fruits & Vegetables"
