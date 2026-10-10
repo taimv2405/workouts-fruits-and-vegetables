@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   frame: {
     flex: 1,
     marginHorizontal: spacing.lg,
+    padding: spacing.sm,
     overflow: "hidden",
   },
 });

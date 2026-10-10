@@ -1,12 +1,11 @@
 // Võ Minh Tài - 23521382
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList } from "react-native";
 
 import ItemSeparator from "@/components/ItemSeparator";
 import ListSection from "@/components/ListSection";
 import SelectableRow from "@/components/SelectableRow";
 import { workouts } from "@/data/workouts";
 import { type Selection } from "@/hooks/useSelection";
-import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/workouts.jpg");
 
@@ -23,7 +22,6 @@ export default function WorkoutList({ selection }: WorkoutListProps) {
         data={workouts}
         keyExtractor={(item) => item.id}
         extraData={selected}
-        contentContainerStyle={styles.listContent}
         ItemSeparatorComponent={ItemSeparator}
         renderItem={({ item }) => (
           <SelectableRow
@@ -36,9 +34,3 @@ export default function WorkoutList({ selection }: WorkoutListProps) {
     </ListSection>
   );
 }
-
-const styles = StyleSheet.create({
-  listContent: {
-    padding: spacing.sm,
-  },
-});

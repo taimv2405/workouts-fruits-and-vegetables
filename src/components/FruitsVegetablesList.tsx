@@ -1,5 +1,5 @@
 // Võ Minh Tài - 23521382
-import { SectionList, StyleSheet } from "react-native";
+import { SectionList } from "react-native";
 
 import ItemSeparator from "@/components/ItemSeparator";
 import ListSection from "@/components/ListSection";
@@ -7,7 +7,6 @@ import SectionHeader from "@/components/SectionHeader";
 import SelectableRow from "@/components/SelectableRow";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
 import { type Selection } from "@/hooks/useSelection";
-import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/fruits-vegetables.jpg");
 
@@ -30,7 +29,6 @@ export default function FruitsVegetablesList({
         keyExtractor={(item) => item}
         extraData={selected}
         stickySectionHeadersEnabled={false}
-        contentContainerStyle={styles.listContent}
         ItemSeparatorComponent={ItemSeparator}
         renderSectionHeader={({ section }) => (
           <SectionHeader title={section.title} iconUrl={section.url} />
@@ -46,9 +44,3 @@ export default function FruitsVegetablesList({
     </ListSection>
   );
 }
-
-const styles = StyleSheet.create({
-  listContent: {
-    padding: spacing.sm,
-  },
-});
