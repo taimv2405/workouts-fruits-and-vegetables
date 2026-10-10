@@ -2,6 +2,7 @@
 import type { TextStyle } from "react-native";
 
 export const colors = {
+  text: "#000000",
   primary: "#2196f3",
   onPrimary: "#ffffff",
   surface: "#ececf0",

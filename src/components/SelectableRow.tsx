@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   },
   label: {
     ...typography.body,
+    color: colors.text,
     flex: 1,
     minWidth: 0,
   },
