@@ -2,6 +2,8 @@
 import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 
+import { colors, spacing, typography } from "@/theme/tokens";
+
 type SectionHeaderProps = {
   title: string;
   iconUrl: string;
@@ -21,12 +23,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center",
-    paddingVertical: 12,
+    paddingVertical: spacing.md,
   },
   title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#ffffff",
+    ...typography.title,
+    color: colors.onImage,
   },
   icon: {
     width: 40,

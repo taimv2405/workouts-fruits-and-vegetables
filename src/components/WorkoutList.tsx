@@ -5,6 +5,7 @@ import ItemSeparator from "@/components/ItemSeparator";
 import ListSection from "@/components/ListSection";
 import SelectableRow from "@/components/SelectableRow";
 import { workouts } from "@/data/workouts";
+import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/workouts.jpg");
 
@@ -36,6 +37,6 @@ export default function WorkoutList({ selected, onToggle }: WorkoutListProps) {
 
 const styles = StyleSheet.create({
   listContent: {
-    padding: 8,
+    padding: spacing.sm,
   },
 });

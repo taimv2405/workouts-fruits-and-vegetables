@@ -3,6 +3,8 @@ import { Image, type ImageProps } from "expo-image";
 import type { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { colors, spacing, typography } from "@/theme/tokens";
+
 type ListSectionProps = {
   title: string;
   background: ImageProps["source"];
@@ -34,15 +36,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    paddingVertical: 8,
-    fontSize: 20,
-    fontWeight: "bold",
+    ...typography.title,
+    paddingVertical: spacing.sm,
     textAlign: "center",
-    color: "#1a1adb",
+    color: colors.heading,
   },
   frame: {
     flex: 1,
-    marginHorizontal: 16,
+    marginHorizontal: spacing.lg,
     overflow: "hidden",
   },
 });

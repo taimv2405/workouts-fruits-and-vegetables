@@ -1,6 +1,8 @@
 // Võ Minh Tài - 23521382
 import { StyleSheet, Text, View } from "react-native";
 
+import { colors, spacing, typography } from "@/theme/tokens";
+
 type SelectedSummaryProps = {
   items: string[];
 };
@@ -16,17 +18,16 @@ export default function SelectedSummary({ items }: SelectedSummaryProps) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.lg,
   },
   title: {
-    fontSize: 18,
-    fontWeight: "bold",
+    ...typography.bodyBold,
     textAlign: "center",
-    color: "#e5181c",
+    color: colors.accent,
   },
   items: {
-    fontSize: 18,
+    ...typography.body,
     textAlign: "center",
   },
 });

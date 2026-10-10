@@ -6,6 +6,7 @@ import ListSection from "@/components/ListSection";
 import SectionHeader from "@/components/SectionHeader";
 import SelectableRow from "@/components/SelectableRow";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
+import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/fruits-vegetables.jpg");
 
@@ -47,6 +48,6 @@ export default function FruitsVegetablesList({
 
 const styles = StyleSheet.create({
   listContent: {
-    padding: 8,
+    padding: spacing.sm,
   },
 });
