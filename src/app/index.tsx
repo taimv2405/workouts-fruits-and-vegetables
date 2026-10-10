@@ -6,6 +6,7 @@ import ItemSeparator from "@/components/ItemSeparator";
 import ListSection from "@/components/ListSection";
 import SectionHeader from "@/components/SectionHeader";
 import SelectableRow from "@/components/SelectableRow";
+import SelectedSummary from "@/components/SelectedSummary";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
 import { workouts } from "@/data/workouts";
 
@@ -66,6 +67,7 @@ export default function Index() {
           )}
         />
       </ListSection>
+      <SelectedSummary items={[...selected]} />
     </SafeAreaView>
   );
 }
