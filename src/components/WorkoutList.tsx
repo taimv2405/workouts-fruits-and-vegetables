@@ -5,15 +5,18 @@ import ItemSeparator from "@/components/ItemSeparator";
 import ListSection from "@/components/ListSection";
 import SelectableRow from "@/components/SelectableRow";
 import { workouts } from "@/data/workouts";
-import { type SelectionListProps } from "@/hooks/useSelection";
+import { type Selection } from "@/hooks/useSelection";
 import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/workouts.jpg");
 
-export default function WorkoutList({
-  selected,
-  onToggle,
-}: SelectionListProps) {
+type WorkoutListProps = {
+  selection: Selection;
+};
+
+export default function WorkoutList({ selection }: WorkoutListProps) {
+  const { selected, toggle } = selection;
+
   return (
     <ListSection title="FlatList - Workouts" background={background}>
       <FlatList
@@ -26,7 +29,7 @@ export default function WorkoutList({
           <SelectableRow
             label={item.type}
             selected={selected.has(item.type)}
-            onToggle={() => onToggle(item.type)}
+            onToggle={() => toggle(item.type)}
           />
         )}
       />

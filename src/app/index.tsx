@@ -8,13 +8,13 @@ import WorkoutList from "@/components/WorkoutList";
 import { useSelection } from "@/hooks/useSelection";
 
 export default function Index() {
-  const { selected, toggle } = useSelection();
+  const selection = useSelection();
 
   return (
     <SafeAreaView style={styles.container}>
-      <WorkoutList selected={selected} onToggle={toggle} />
-      <FruitsVegetablesList selected={selected} onToggle={toggle} />
-      <SelectedSummary items={[...selected]} />
+      <WorkoutList selection={selection} />
+      <FruitsVegetablesList selection={selection} />
+      <SelectedSummary items={[...selection.selected]} />
     </SafeAreaView>
   );
 }

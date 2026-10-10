@@ -6,15 +6,20 @@ import ListSection from "@/components/ListSection";
 import SectionHeader from "@/components/SectionHeader";
 import SelectableRow from "@/components/SelectableRow";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
-import { type SelectionListProps } from "@/hooks/useSelection";
+import { type Selection } from "@/hooks/useSelection";
 import { spacing } from "@/theme/tokens";
 
 const background = require("@/assets/images/backgrounds/fruits-vegetables.jpg");
 
+type FruitsVegetablesListProps = {
+  selection: Selection;
+};
+
 export default function FruitsVegetablesList({
-  selected,
-  onToggle,
-}: SelectionListProps) {
+  selection,
+}: FruitsVegetablesListProps) {
+  const { selected, toggle } = selection;
+
   return (
     <ListSection
       title="SectionList - Fruits & Vegetables"
@@ -34,7 +39,7 @@ export default function FruitsVegetablesList({
           <SelectableRow
             label={item}
             selected={selected.has(item)}
-            onToggle={() => onToggle(item)}
+            onToggle={() => toggle(item)}
           />
         )}
       />
