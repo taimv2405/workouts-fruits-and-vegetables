@@ -11,7 +11,7 @@ export default function SectionHeader({ title, iconUrl }: SectionHeaderProps) {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title}</Text>
-      <Image source={{ uri: iconUrl }} style={styles.icon} />
+      <Image source={{ uri: iconUrl }} style={styles.icon} accessible={false} />
     </View>
   );
 }

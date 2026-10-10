@@ -12,20 +12,21 @@ export default function SelectableRow({
   selected,
   onToggle,
 }: SelectableRowProps) {
+  const actionText = selected ? "DESELECT" : "SELECT";
+
   return (
     <View style={styles.row}>
       <Text style={styles.label}>{label}</Text>
       <Pressable
         accessibilityRole="button"
+        accessibilityLabel={`${actionText.toLowerCase()} ${label}`}
         onPress={onToggle}
         style={({ pressed }) => [
           styles.button,
           pressed && styles.buttonPressed,
         ]}
       >
-        <Text style={styles.buttonText}>
-          {selected ? "DESELECT" : "SELECT"}
-        </Text>
+        <Text style={styles.buttonText}>{actionText}</Text>
       </Pressable>
     </View>
   );
