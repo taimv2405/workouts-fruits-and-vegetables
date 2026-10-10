@@ -45,9 +45,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
   },
   label: {
+    ...typography.body,
     flex: 1,
     minWidth: 0,
-    ...typography.body,
   },
   button: {
     paddingVertical: spacing.md,
