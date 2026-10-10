@@ -1,3 +1,4 @@
+// Võ Minh Tài - 23521382
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 type SelectableRowProps = {

@@ -1,3 +1,4 @@
+// Võ Minh Tài - 23521382
 import { useState } from "react";
 import { FlatList, SectionList, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";

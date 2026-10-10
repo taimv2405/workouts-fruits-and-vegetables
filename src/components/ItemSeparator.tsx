@@ -1,3 +1,4 @@
+// Võ Minh Tài - 23521382
 import { StyleSheet, View } from "react-native";
 
 export default function ItemSeparator() {
