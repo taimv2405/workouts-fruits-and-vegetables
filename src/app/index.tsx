@@ -1,5 +1,4 @@
 // Võ Minh Tài - 23521382
-import { useState } from "react";
 import { FlatList, SectionList, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -10,22 +9,13 @@ import SelectableRow from "@/components/SelectableRow";
 import SelectedSummary from "@/components/SelectedSummary";
 import { fruitsVegetables } from "@/data/fruits-vegetables";
 import { workouts } from "@/data/workouts";
+import { useSelection } from "@/hooks/useSelection";
 
 const workoutsBackground = require("@/assets/images/backgrounds/workouts.jpg");
 const fruitsVegetablesBackground = require("@/assets/images/backgrounds/fruits-vegetables.jpg");
 
 export default function Index() {
-  const [selected, setSelected] = useState<Set<string>>(() => new Set());
-
-  const toggle = (label: string) => {
-    setSelected((current) => {
-      const next = new Set(current);
-      if (!next.delete(label)) {
-        next.add(label);
-      }
-      return next;
-    });
-  };
+  const { selected, toggle } = useSelection();
 
   return (
     <SafeAreaView style={styles.container}>
