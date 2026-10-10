@@ -55,7 +55,7 @@ export default function Index() {
           contentContainerStyle={styles.listContent}
           ItemSeparatorComponent={ItemSeparator}
           renderSectionHeader={({ section }) => (
-            <SectionHeader title={section.title} />
+            <SectionHeader title={section.title} iconUrl={section.url} />
           )}
           renderItem={({ item }) => (
             <SelectableRow
